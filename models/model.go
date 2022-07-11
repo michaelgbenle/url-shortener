@@ -1,5 +1,5 @@
 package models
 
 type Short struct {
-	ID int64
+	ID uint64
 }
