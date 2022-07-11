@@ -1,6 +1,9 @@
 package models
 
-import "gorm.io/gorm"
+import (
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
+)
 
 var db gorm.DB
 
@@ -14,6 +17,7 @@ type Short struct {
 
 func Setup() {
 	dsn := "host=172.17.0.2 user= admin password=test dbname=admin port=5432 sslmode=disable"
+	gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
 }
 
