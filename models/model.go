@@ -7,3 +7,7 @@ type Short struct {
 	Clicked  uint64 `json:"clicked"`
 	Random   bool   `json:"random"`
 }
+
+func Setup() {
+
+}
