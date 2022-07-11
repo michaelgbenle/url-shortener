@@ -6,7 +6,7 @@ import (
 	"log"
 )
 
-var db gorm.DB
+var db *gorm.DB
 
 type Short struct {
 	ID       uint64 `json:"id" gorm:"primaryKey"`
@@ -17,14 +17,15 @@ type Short struct {
 }
 
 func Setup() {
-	dsn := "host=172.17.0.2 user= admin password=test dbname=admin port=5432 sslmode=disable"
+	dsn := "host=172.17.0.2 user=admin password=test dbname=admin port=5432 sslmode=disable"
 	var err error
-	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatal(err)
 	}
-	err = db.AutoMigrate(&Short{})
-	if err != nil {
+
+	dberr := db.AutoMigrate(&Short{})
+	if dberr != nil {
 		log.Fatal(err)
 	}
 }
