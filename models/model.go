@@ -5,4 +5,5 @@ type Short struct {
 	Redirect string `json:"redirect"`
 	Shorted  string `json:"shorted" gorm:"unique;not null"`
 	Clicked  uint64 `json:"clicked"`
+	Random   bool   `json:"random"`
 }
