@@ -1,5 +1,5 @@
 package models
 
 type Short struct {
-	ID uint64 `json:"id"`
+	ID uint64 `json:"id" gorm:"primaryKey"`
 }
