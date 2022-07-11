@@ -1,5 +1,9 @@
 package models
 
+import "gorm.io/gorm"
+
+var db gorm.DB
+
 type Short struct {
 	ID       uint64 `json:"id" gorm:"primaryKey"`
 	Redirect string `json:"redirect"`
