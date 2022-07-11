@@ -11,3 +11,7 @@ type Short struct {
 func Setup() {
 
 }
+
+//docker run --name auth-psql -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=test -d postgres:14
+//796987ecd8a9ae25fdb482179c1b48cbf5d9f253dc24313ae0d566b63e29088a
+// docker postgres IP = "172.17.0.2"
