@@ -23,6 +23,7 @@ func Setup() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	err = db.AutoMigrate(&Short{})
 }
 
 //docker run --name auth-psql -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=test -d postgres:14
