@@ -1,1 +1,3 @@
-FROM redis:alpine:localhost
+FROM redis:alpine
+
+EXPOSE 6379
