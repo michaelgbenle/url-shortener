@@ -16,7 +16,7 @@ func main() {
 		panic(err)
 	}
 		app:= fiber.New()
-		app.use(logger.New())
+		app.Use(logger.New())
 
 		SetupRoutes(app)
 		log.Fatal(app.Listen(os.Getenv("APP_PORT")))
