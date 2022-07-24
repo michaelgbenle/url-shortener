@@ -13,5 +13,5 @@ type response struct {
 	CustomShort		string	`json:"custom_short"`
 	Expiry			time.Duration	`json:"expiry"`
 	XRateRemaining	int				`json:"rate_limit"`
-	XRateLimitRest	time.Duration	`json:"XRateLimitRest"`
+	XRateLimitRest	time.Duration	`json:"rate_limit_reset"`
 }
