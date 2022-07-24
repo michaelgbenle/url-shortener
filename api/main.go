@@ -7,6 +7,6 @@ func main()  {
 }
 
 func SetupRoutes(app *fiber.App){
-	app.get("/url", routes.Resolve)
+	app.Get("/url", routes.Resolve)
 
 }
