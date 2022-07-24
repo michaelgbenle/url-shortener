@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"os"
 
 	"github.com/gofiber/fiber"
@@ -18,7 +19,7 @@ func main() {
 		app.use(logger.New())
 
 		SetupRoutes(app)
-		app.Listen(os.Getenv("APP_PORT"))
+		log.Fatal(app.Listen(os.Getenv("APP_PORT")))
 }
 
 func SetupRoutes(app *fiber.App) {
