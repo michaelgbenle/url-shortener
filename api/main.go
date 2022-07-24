@@ -14,6 +14,8 @@ func main() {
 	}
 		app:= fiber.New()
 		app.use(logger.New())
+
+		SetupRoutes(app)
 }
 
 func SetupRoutes(app *fiber.App) {
