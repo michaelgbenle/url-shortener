@@ -13,7 +13,7 @@ func main() {
 		panic(err)
 	}
 		app:= fiber.New()
-		app.use(logger.New)
+		app.use(logger.New())
 }
 
 func SetupRoutes(app *fiber.App) {
