@@ -9,8 +9,8 @@ type request struct {
 }
 
 type response struct {
-	URL				string
-	CustomeShort	string
+	URL				string	`json:"url"`
+	CustomShort	string
 	Expiry			time.Duration
 	XRateRemaining	int
 	XRateLimitRest	time.Duration
