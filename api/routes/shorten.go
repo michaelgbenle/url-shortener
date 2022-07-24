@@ -12,5 +12,5 @@ type response struct {
 	CustomeShort
 	Expiry
 	XRateRemaining
-	XRateRest
+	XRateLimitRest
 }
