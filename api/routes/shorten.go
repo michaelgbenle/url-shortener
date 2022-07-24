@@ -9,9 +9,9 @@ type request struct {
 }
 
 type response struct {
-	URL
-	CustomeShort
-	Expiry
-	XRateRemaining
-	XRateLimitRest
+	URL				string
+	CustomeShort	string
+	Expiry			time.Duration
+	XRateRemaining	int
+	XRateLimitRest	time.Duration
 }
