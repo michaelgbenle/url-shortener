@@ -1,6 +1,9 @@
 package main
 
-import "github.com/michaelgbenle/url-shortener/routes"
+import (
+	"github.com/gofiber/fiber"
+	"github.com/michaelgbenle/url-shortener/routes"
+)
 
 func main() {
 app:= fiber.New()
