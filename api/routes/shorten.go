@@ -12,6 +12,6 @@ type response struct {
 	URL				string	`json:"url"`
 	CustomShort		string	`json:"custom_short"`
 	Expiry			time.Duration	`json:"expiry"`
-	XRateRemaining	int				`json:"xRateRemaining"`
+	XRateRemaining	int				`json:"rate_limit"`
 	XRateLimitRest	time.Duration	`json:"XRateLimitRest"`
 }
