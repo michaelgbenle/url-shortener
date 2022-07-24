@@ -3,10 +3,14 @@ package routes
 
 type request struct {
 	URL
-	CustomeShort
+	CustomShort
 	Expiry
 }
 
 type response struct {
-
+	URL
+	CustomeShort
+	Expiry
+	XRateRemaining
+	XRateRest
 }
