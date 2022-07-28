@@ -19,4 +19,5 @@ if url == os.Getenv("DOMAIN"){
 }
 newURL :=strings.Replace(url, "http://", "", 1)
 newURL=strings.Replace(newURL,"https://", "", 1)
+newURL=strings.Replace(newURL,"www.", "", 1)
 }
