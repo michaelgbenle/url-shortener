@@ -4,6 +4,6 @@ func EnforceHTTP()string{
 
 }
 
-func RemoveDomainError()  {
+func RemoveDomainError(url string) bool {
 	
 }
