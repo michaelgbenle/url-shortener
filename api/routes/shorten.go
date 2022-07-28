@@ -28,5 +28,6 @@ func ShortenUrl(c *fiber.Ctx) error {
 	// implement rate limiting
 	//check if input is an actual url
 	//check for domain error
+	//enforce https,SSL
 
 }
