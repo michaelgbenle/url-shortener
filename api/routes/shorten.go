@@ -26,5 +26,6 @@ func ShortenUrl(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusBadRequest.JSON(fiber.Map))
 	}
 	// implement rate limiting
+	//check if input is an actual url
 
 }
