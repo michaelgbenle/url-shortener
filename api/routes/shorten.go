@@ -27,6 +27,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 	}
 	// implement rate limiting
 	//check if input is an actual url
+	if !govalidator .IsURL()
 	//check for domain error
 	//enforce https,SSL
 
