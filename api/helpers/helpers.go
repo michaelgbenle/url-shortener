@@ -3,6 +3,7 @@ package helpers
 import (
 	"net/url"
 	"os"
+	"strings"
 )
 
 func EnforceHTTP(url string) string {
@@ -16,4 +17,5 @@ func RemoveDomainError(url string) bool {
 if url == os.Getenv("DOMAIN"){
 	return false
 }
+newURL :=strings.Replace(url, "http://", "", 1)
 }
