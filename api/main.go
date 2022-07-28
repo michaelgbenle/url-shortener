@@ -13,7 +13,7 @@ import (
 func main() {
 	err:= godotenv.Load()
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 		app:= fiber.New()
 		app.Use(logger.New())
