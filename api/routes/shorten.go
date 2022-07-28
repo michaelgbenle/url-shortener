@@ -21,5 +21,6 @@ type response struct {
 }
 
 func ShortenUrl(c *fiber.Ctx) error {
+	body := new(request)
 
 }
