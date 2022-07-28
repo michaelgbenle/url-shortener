@@ -1,7 +1,6 @@
 package helpers
 
 import (
-	"net/url"
 	"os"
 	"strings"
 )
