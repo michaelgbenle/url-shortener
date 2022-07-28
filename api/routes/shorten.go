@@ -4,6 +4,7 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/michaelgbenle/url-shortener/helpers"
 )
 
 type request struct {
@@ -31,6 +32,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error":"invalid url"})
 	}
 	//check for domain error
+	if !helpers.IsURL(body.URL)
 	//enforce https,SSL
 
 }
