@@ -22,5 +22,8 @@ type response struct {
 
 func ShortenUrl(c *fiber.Ctx) error {
 	body := new(request)
+	if err := c.BodyParser(&body); err!= nil {
+		return c.Status(fiber.StatusBadRequest.JSON(fiber.Map))
+	}
 
 }
