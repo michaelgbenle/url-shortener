@@ -33,7 +33,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 	}
 	//check for domain error
 	if !helpers.RemoveDomainError(body.URL){
-		return c.Status(fiber.StatusBadRequest)
+		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error":""})
 	}
 	//enforce https,SSL
 
