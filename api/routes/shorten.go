@@ -20,6 +20,6 @@ type response struct {
 	XRateLimitRest	time.Duration	`json:"rate_limit_reset"`
 }
 
-func ShortenUrl(c *fiber.Ctx) {
+func ShortenUrl(c *fiber.Ctx) error {
 
 }
