@@ -25,5 +25,6 @@ func ShortenUrl(c *fiber.Ctx) error {
 	if err := c.BodyParser(&body); err!= nil {
 		return c.Status(fiber.StatusBadRequest.JSON(fiber.Map))
 	}
+	// implement rate limiting
 
 }
