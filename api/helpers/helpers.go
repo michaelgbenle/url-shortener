@@ -14,6 +14,6 @@ func EnforceHTTP(url string) string {
 
 func RemoveDomainError(url string) bool {
 if url == os.Getenv("DOMAIN"){
-	
+	return false
 }
 }
