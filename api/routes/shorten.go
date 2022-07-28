@@ -23,7 +23,7 @@ type response struct {
 func ShortenUrl(c *fiber.Ctx) error {
 	body := new(request)
 	if err := c.BodyParser(&body); err!= nil {
-		return c.Status(fiber.StatusBadRequest.JSON(fiber.Map("error": "cannot parse JS")))
+		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "cannot parse JS"})
 	}
 	// implement rate limiting
 	//check if input is an actual url
