@@ -1,6 +1,9 @@
 package helpers
 
-import "net/url"
+import (
+	"net/url"
+	"os"
+)
 
 func EnforceHTTP(url string) string {
 	if url[:4] !=  "http" {
@@ -10,5 +13,7 @@ func EnforceHTTP(url string) string {
 }
 
 func RemoveDomainError(url string) bool {
-
+if url == os.Getenv("DOMAIN"){
+	
+}
 }
