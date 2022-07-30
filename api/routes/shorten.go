@@ -68,6 +68,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 		id= body.CustomShort
 	}
 r:= database.CreateClient(0)
+defer r.Close()
 
 
 
