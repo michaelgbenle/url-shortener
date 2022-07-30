@@ -44,7 +44,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 			limit,_:=r2.TTL(database.Ctx,c.IP()).Result()
 			return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{
 				"error":"Rate limit exceeded",
-				"rate_limit_rest": limit/time.Nanosecond/time.Minute
+				"rate_limit_rest": limit/time.Nanosecond/time.Minute,
 			})
 		}
 	}
@@ -57,7 +57,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 	}
 	//check for domain error
 	if !helpers.RemoveDomainError(body.URL){
-		return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{"error":""})
+		return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{"error":"you cant hack the system"})
 	}
 	//enforce https,SSL
 	body.URL= helpers.EnforceHTTP(body.URL)
