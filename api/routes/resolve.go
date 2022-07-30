@@ -20,6 +20,6 @@ func ResolveUrl(c *fiber.Ctx) error {
 			"error":"cannot connect to db",
 		})
 	}
-
+rInr := database.CreateClient(1)
 
 }
