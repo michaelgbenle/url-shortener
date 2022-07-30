@@ -88,6 +88,7 @@ err = r.Set(database.Ctx,id,body.URL,body.Expiry*3600*time.Second).Err()
 resp:= response{
 	URL: ,
 	CustomShort:,
+	Expiry:,
 	
 }
 
