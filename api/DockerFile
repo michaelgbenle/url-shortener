@@ -6,7 +6,7 @@ ADD . /build/
 
 WORKDIR /build
 
-RUN go build -o main.
+RUN go build -o main .
 
 #stage 2
 
@@ -17,3 +17,5 @@ RUN adduser -S -D -H /app appuser
 USER appuser
 
 COPY . /app
+
+COPY --from=builder /build/main
