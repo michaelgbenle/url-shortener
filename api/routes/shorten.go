@@ -30,6 +30,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 	// implement rate limiting
 	r2 := database.CreateClient(1)
 	defer r2.Close()
+	r2.Get(database.Ctx, c.IP())
 
 
 	//check if input is an actual url
