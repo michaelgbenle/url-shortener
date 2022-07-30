@@ -60,6 +60,6 @@ func ShortenUrl(c *fiber.Ctx) error {
 	}
 	//enforce https,SSL
 	body.URL= helpers.EnforceHTTP(body.URL)
-	r2.Decr(database.Ctx)
+	r2.Decr(database.Ctx,c.IP())
 
 }
