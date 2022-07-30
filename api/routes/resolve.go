@@ -15,6 +15,8 @@ func ResolveUrl(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusNotFound).JSON(fiber.Map{
 			"error":"short not found in the database",
 		})
+	}else if err != nil {
+		
 	}
 
 
