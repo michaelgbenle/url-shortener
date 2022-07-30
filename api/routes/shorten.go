@@ -75,7 +75,9 @@ if val != ""{
 		"error":"url custom short is already in use",
 	})
 }
-
+if body.Expiry ==0{
+	
+}
 
 	r2.Decr(database.Ctx,c.IP())
 
