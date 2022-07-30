@@ -89,6 +89,7 @@ resp:= response{
 	URL: ,
 	CustomShort:,
 	Expiry:,
+	XRateTemaining:,
 	
 }
 
