@@ -81,7 +81,9 @@ if body.Expiry ==0{
 
 err = r.Set(database.Ctx,id,body.URL,body.Expiry*3600*time.Second).Err()
 		if err != nil{
-			c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{})
+			c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
+				"error":"",
+			})
 		}
 
 
