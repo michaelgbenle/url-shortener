@@ -24,6 +24,6 @@ WORKDIR /app
 
 EXPOSE 4040
 
-CMD [ "./main" ]
+CMD ["./main"]
 
 
