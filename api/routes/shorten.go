@@ -47,7 +47,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 			})
 		}
 	}
-}
+
 
 
 	//check if input is an actual url
