@@ -76,7 +76,7 @@ if val != ""{
 	})
 }
 if body.Expiry ==0{
-	
+	body.Expiry=24
 }
 
 	r2.Decr(database.Ctx,c.IP())
