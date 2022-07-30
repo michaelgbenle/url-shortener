@@ -15,5 +15,6 @@ func CreateClient(dbNo int) *redis.Client {
 	rdb := redis.NewClient(&redis.Options{
 		Addr:
 		Password:
+		DB: dbNo,
 	})
 }
