@@ -28,7 +28,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "cannot parse JS"})
 	}
 	// implement rate limiting
-database.CreateClient(1)
+	r2 := database.CreateClient(1)
 
 
 	//check if input is an actual url
