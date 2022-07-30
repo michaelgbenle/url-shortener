@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"os"
 	"time"
 
 	"github.com/go-redis/redis/v8"
@@ -33,7 +34,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 	defer r2.Close()
 	val,err:=r2.Get(database.Ctx, c.IP()).Result()
 	if err == redis.Nil{
-		_=r2.Set()
+		_=r2.Set(database.Ctx,c.IP(),os.Getenv("API_QUOTA"))
 	}
 	}
 
