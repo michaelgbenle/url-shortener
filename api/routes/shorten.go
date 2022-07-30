@@ -99,4 +99,8 @@ resp:= response{
 
 	ttl,_ := r2.TTL(database.Ctx,c.IP()).Result()
 	resp.XRateLimitReset=ttl/time.Nanosecond/time.Minute
+
+	resp.CustomShort=os.Getenv("DOMAIN") + "/" + id
+
+	return c.Status()
 }
