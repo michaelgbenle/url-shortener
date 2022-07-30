@@ -3,6 +3,7 @@ package routes
 import (
 	"time"
 
+	"github.com/go-redis/redis/v8"
 	"github.com/gofiber/fiber/v2"
 	"github.com/michaelgbenle/url-shortener/database"
 	"github.com/michaelgbenle/url-shortener/helpers"
@@ -30,7 +31,11 @@ func ShortenUrl(c *fiber.Ctx) error {
 	// implement rate limiting
 	r2 := database.CreateClient(1)
 	defer r2.Close()
-	r2.Get(database.Ctx, c.IP()).Result()
+	val,err:=r2.Get(database.Ctx, c.IP()).Result()
+	if err == redis.Nil{
+		
+	}
+	}
 
 
 	//check if input is an actual url
