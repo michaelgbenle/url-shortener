@@ -69,7 +69,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 	}
 r:= database.CreateClient(0)
 defer r.Close()
-
+val,_= r.Get(database.Ctx,id).Result()
 
 
 	r2.Decr(database.Ctx,c.IP())
