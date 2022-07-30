@@ -1,4 +1,12 @@
 package database
 
+import (
+	"context"
 
-import "github.com/go-redis/redis/v8"
+	"github.com/go-redis/redis/v8"
+)
+
+
+
+
+var Ctx = context.Background()
