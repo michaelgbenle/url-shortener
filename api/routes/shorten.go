@@ -85,7 +85,11 @@ err = r.Set(database.Ctx,id,body.URL,body.Expiry*3600*time.Second).Err()
 				"error":"unable to connect to server",
 			})
 		}
-
+resp:= response{
+	URL: ,
+	CustomShort:,
+	
+}
 
 	r2.Decr(database.Ctx,c.IP())
 
