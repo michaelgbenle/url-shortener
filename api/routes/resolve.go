@@ -21,5 +21,6 @@ func ResolveUrl(c *fiber.Ctx) error {
 		})
 	}
 rInr := database.CreateClient(1)
+defer rInr.Close()
 
 }
