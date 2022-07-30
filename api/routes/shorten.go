@@ -4,6 +4,7 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/michaelgbenle/url-shortener/database"
 	"github.com/michaelgbenle/url-shortener/helpers"
 )
 
@@ -27,6 +28,9 @@ func ShortenUrl(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "cannot parse JS"})
 	}
 	// implement rate limiting
+database.CreateClient(1)
+
+
 	//check if input is an actual url
 	if !govalidator .IsURL(body.URL){
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error":"invalid url"})
