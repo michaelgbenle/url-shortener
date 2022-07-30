@@ -17,7 +17,7 @@ func ResolveUrl(c *fiber.Ctx) error {
 		})
 	}else if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-			
+			"error":"",
 		})
 	}
 
