@@ -89,7 +89,7 @@ resp:= response{
 	URL:			body.URL ,
 	CustomShort:	"",
 	Expiry:			body.Expiry,
-	XRateTemaining:	10,
+	XRateRemaining:	10,
 	XRateLimitReset:30,
 }
 
