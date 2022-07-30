@@ -7,6 +7,7 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/internal/uuid"
 	"github.com/michaelgbenle/url-shortener/database"
 	"github.com/michaelgbenle/url-shortener/helpers"
 )
@@ -62,7 +63,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 	body.URL= helpers.EnforceHTTP(body.URL)
 	var id string
 	if body.CustomShort==""{
-		
+		id = uuid.New().String()
 	}
 
 
