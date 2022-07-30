@@ -86,11 +86,11 @@ err = r.Set(database.Ctx,id,body.URL,body.Expiry*3600*time.Second).Err()
 			})
 		}
 resp:= response{
-	URL: ,
-	CustomShort:,
-	Expiry:,
-	XRateTemaining:,
-	XRateLimitReset:,
+	URL:			body.URL ,
+	CustomShort:	"",
+	Expiry:			body.Expiry,
+	XRateTemaining:	10,
+	XRateLimitReset:30,
 }
 
 	r2.Decr(database.Ctx,c.IP())
