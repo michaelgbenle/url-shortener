@@ -23,7 +23,7 @@ type response struct {
 	CustomShort		string	`json:"custom_short"`
 	Expiry			time.Duration	`json:"expiry"`
 	XRateRemaining	int				`json:"rate_limit"`
-	XRateLimitRest	time.Duration	`json:"rate_limit_reset"`
+	XRateLimitReset	time.Duration	`json:"rate_limit_reset"`
 }
 
 func ShortenUrl(c *fiber.Ctx) error {
@@ -98,4 +98,5 @@ resp:= response{
 	resp.XRateRemaining, _ = strconv.Atoi(val)
 
 	ttl,_ := r2.TTL(database.Ctx,c.IP()).Result()
+	resp.XRateLimitReset
 }
