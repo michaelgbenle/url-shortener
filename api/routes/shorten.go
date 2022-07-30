@@ -7,9 +7,10 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/internal/uuid"
+	"github.com/google.com/uuid"
 	"github.com/michaelgbenle/url-shortener/database"
 	"github.com/michaelgbenle/url-shortener/helpers"
+	"github.com/asaskevich/govalidator"
 )
 
 type request struct {

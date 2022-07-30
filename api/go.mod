@@ -15,6 +15,7 @@ require (
 
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
+	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/gofiber/fiber v1.14.6
 	github.com/joho/godotenv v1.4.0
