@@ -14,3 +14,6 @@ FROM alpine
 
 RUN adduser -S -D -H /app appuser
 
+USER appuser
+
+COPY . /app
