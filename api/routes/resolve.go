@@ -12,7 +12,7 @@ func ResolveUrl(c *fiber.Ctx) error {
 	defer r.Close()
 	value,err:=r.Get(database.Ctx, url).Result()
 	if err == redis.Nil{
-		return c.Status(fiber.StatusNotFound).JSON()
+		return c.Status(fiber.StatusNotFound).JSON(fiber.Map)
 	}
 
 
