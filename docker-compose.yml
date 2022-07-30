@@ -5,5 +5,7 @@ services:
     build: api
     ports:
       -"4040:4040"
+    depends_on:
+      - db
 
   db:
