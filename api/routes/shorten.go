@@ -40,7 +40,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 		val,_=r2.Get(database.Ctx,c.IP().Result())
 		valInt,_ := strconv.Atoi(val)
 		if valInt <= 0{
-			limit,_:=r2.TTL(database.Ctx,)
+			limit,_:=r2.TTL(database.Ctx,c.IP()).Result()
 		}
 	}
 }
