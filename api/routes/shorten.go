@@ -95,4 +95,5 @@ resp:= response{
 
 	r2.Decr(database.Ctx,c.IP())
 	val,_=r2.Get(database.Ctx,c.IP()).Result()
+	resp.XRateRemaining, _ = strconv.Atoi(val)
 }
