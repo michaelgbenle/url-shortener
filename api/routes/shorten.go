@@ -2,6 +2,7 @@ package routes
 
 import (
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/go-redis/redis/v8"
@@ -37,6 +38,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 		_=r2.Set(database.Ctx,c.IP(),os.Getenv("API_QUOTA"), 30*time.Minute).Err()
 	}else{
 		val,_=r2.Get(database.Ctx,c.IP().Result())
+		valInt,_ := strconv.Atoi(val)
 	}
 	}
 
