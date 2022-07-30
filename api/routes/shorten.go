@@ -38,7 +38,7 @@ func ShortenUrl(c *fiber.Ctx) error {
 	if err == redis.Nil{
 		_=r2.Set(database.Ctx,c.IP(),os.Getenv("API_QUOTA"), 30*time.Minute).Err()
 	}else{
-		val,_=r2.Get(database.Ctx,c.IP().Result())
+		val,_=r2.Get(database.Ctx,c.IP()).Result()
 		valInt,_ := strconv.Atoi(val)
 		if valInt <= 0{
 			limit,_:=r2.TTL(database.Ctx,c.IP()).Result()
