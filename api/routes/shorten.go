@@ -90,7 +90,7 @@ resp:= response{
 	CustomShort:,
 	Expiry:,
 	XRateTemaining:,
-	
+	XRateLimitReset:,
 }
 
 	r2.Decr(database.Ctx,c.IP())
